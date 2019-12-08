@@ -68,12 +68,12 @@ public class Problem1SearchTree<T extends Comparable<? super T>> extends BinaryS
 			all.add(rootEntry);
 			ArrayList<T> leftTreeMatches = findAllEntry((BinaryNode<T>) node.getLeftChild(), entry);
 			ArrayList<T> rightTreeMatches = findAllEntry((BinaryNode<T>) node.getRightChild(), entry);
-			if(!leftTreeMatches.equals(null)) {
+			if(leftTreeMatches != null) {
 				for(T o: leftTreeMatches) {
 					all.add(o);
 				}
 			}
-			if(!rightTreeMatches.equals(null)) {
+			if(rightTreeMatches != null) {
 				for(T o: rightTreeMatches) {
 					all.add(o);
 				}
